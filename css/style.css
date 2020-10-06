@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+/*==========
+DEFAULTS
+=========*/
+* {
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e5eff5;
+  font-family: 'Karla', sans-serif;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*==========
+LAYOUT
+=========*/
+.pricing-container {
+  width: 85%;
+  max-width: 400px;
+  background-color: #fff;
+  -webkit-box-shadow: 10px 10px 25px rgba(201, 213, 225, 0.2);
+          box-shadow: 10px 10px 25px rgba(201, 213, 225, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  color: #fff;
+}
+
+.pricing-container h1 {
+  margin-bottom: 1em;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.pricing-container p {
+  font-size: 1.1rem;
+}
+
+.pricing-container .join-community {
+  grid-area: j;
+  padding: 2.2em 2.2em 2.3em;
+}
+
+.pricing-container .join-community h1 {
+  color: #2ab2af;
+  font-size: 1.7rem;
+}
+
+.pricing-container .join-community h2 {
+  color: #c0df34;
+  font-size: 1.3rem;
+  line-height: 1.5em;
+}
+
+.pricing-container .join-community p {
+  margin-top: 1.2em;
+  color: #98a6bd;
+  line-height: 1.9em;
+}
+
+.pricing-container .subscription {
+  grid-area: s;
+  padding: 2.2em 2.2em 2.3em;
+  background-color: #2ab2af;
+}
+
+.pricing-container .subscription h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.pricing-container .subscription h2 small {
+  margin-left: 1em;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #e5eff5;
+}
+
+.pricing-container .subscription p {
+  margin-top: 0.5em;
+}
+
+.pricing-container .subscription .signup-button {
+  background-color: #c0df34;
+  border: 1px solid #98a6bd;
+  -webkit-box-shadow: 10px 10px 25px rgba(201, 213, 225, 0.2);
+          box-shadow: 10px 10px 25px rgba(201, 213, 225, 0.2);
+  width: 100%;
+  border-radius: 7px;
+  color: #fff;
+  padding: 0.9em 0;
+  margin-top: 2.6em;
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.pricing-container .why-us {
+  grid-area: w;
+  padding: 2.2em 2.2em 2.3em;
+  background-color: #2fc6c4;
+}
+
+.pricing-container .why-us ul {
+  list-style: none;
+}
+
+.pricing-container .why-us ul li {
+  margin-bottom: 0.4em;
+  color: #e5eff5;
+}
+
+/*==========
+DESKTOP
+=========*/
+@media only screen and (min-width: 750px) {
+  .pricing-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "j j" "s w";
+    max-width: 750px;
+  }
+  .pricing-container .join-community {
+    padding: 3em 2.8em 2.5em;
+  }
+  .pricing-container .join-community p {
+    margin-top: 0.5em;
+    line-height: 1.7em;
+  }
+  .pricing-container .subscription {
+    padding: 3em 2.8em 2.5em;
+  }
+  .pricing-container .subscription .signup-button {
+    font-size: 1.2rem;
+  }
+  .pricing-container .why-us {
+    padding: 3em 2.8em 2.5em;
+  }
+}
+
+footer {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

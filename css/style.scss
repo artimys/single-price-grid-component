@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+// Primary colors
+$cyan: hsl(179, 62%, 43%);
+$bright-yellow: hsl(71, 73%, 54%);
+// Neutral colors
+$light-gray: hsl(204, 43%, 93%);
+$grayish-blue: hsl(218, 22%, 67%);
+
+
+/*==========
+DEFAULTS
+=========*/
+
+* {
+    font-size: 16px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: $light-gray;
+    font-family: 'Karla', sans-serif;
+
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*==========
+LAYOUT
+=========*/
+
+$box-padding: 2.2em 2.2em 2.3em;
+$box-shadow-color: rgba(201, 213, 225, 0.2);
+
+.pricing-container {
+    width: 85%;
+    max-width: 400px;
+    background-color: #fff;
+    box-shadow: 10px 10px 25px $box-shadow-color;
+    border-radius: 10px;
+    overflow: hidden;
+    color: #fff;
+
+    h1 {
+        margin-bottom: 1em;
+        font-size: 1.5rem;
+        color: #fff;
+    }
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+.pricing-container .join-community {
+    grid-area: j;
+    padding: $box-padding;
+
+    h1 {
+        color: $cyan;
+        font-size: 1.7rem;
+    }
+    h2 {
+        color: $bright-yellow;
+        font-size: 1.3rem;
+        line-height: 1.5em;
+    }
+    p {
+        margin-top: 1.2em;
+        color: $grayish-blue;
+        line-height: 1.9em;
+    }
+}
+
+.pricing-container .subscription {
+    grid-area: s;
+    padding: $box-padding;
+    background-color: $cyan;
+
+    h2 {
+        display: flex;
+        align-items: center;
+
+        font-size: 2.5rem;
+        font-weight: 700;
+        small {
+            margin-left: 1em;
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: $light-gray;
+        }
+    }
+    p {
+        margin-top: 0.5em;
+    }
+
+    .signup-button {
+        background-color: $bright-yellow;
+        border: 1px solid $grayish-blue;
+        box-shadow: 10px 10px 25px $box-shadow-color;
+        width: 100%;
+        border-radius: 7px;
+        color: #fff;
+        padding: 0.9em 0;
+        margin-top: 2.6em;
+        font-family: 'Karla', sans-serif;
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+}
+
+.pricing-container .why-us {
+    grid-area: w;
+    padding: $box-padding;
+    background-color: lighten($cyan, 5%);
+
+    ul {
+        list-style: none;
+        li {
+            margin-bottom: 0.4em;
+            color: $light-gray;
+        }
+    }
+}
+
+
+/*==========
+DESKTOP
+=========*/
+
+@media only screen and (min-width: 750px) {
+
+    $box-padding: 3em 2.8em 2.5em;
+
+    .pricing-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "j j"
+            "s w";
+        max-width: 750px;
+    }
+
+    .pricing-container .join-community {
+        padding: $box-padding;
+        p {
+            margin-top: 0.5em;
+            line-height: 1.7em;
+        }
+    }
+    .pricing-container .subscription {
+        padding: $box-padding;
+
+        .signup-button {
+            font-size: 1.2rem;
+        }
+    }
+    .pricing-container .why-us {
+        padding: $box-padding;
+    }
+
+}
+
+
+
+
+footer {
+    display: none;
+}
