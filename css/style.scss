@@ -6,7 +6,8 @@ $bright-yellow: hsl(71, 73%, 54%);
 // Neutral colors
 $light-gray: hsl(204, 43%, 93%);
 $grayish-blue: hsl(218, 22%, 67%);
-
+// Custom color for why-us container - #4ABEBD
+$why-us-green: hsl(179, 47%, 52%);
 
 /*==========
 DEFAULTS
@@ -35,13 +36,12 @@ LAYOUT
 =========*/
 
 $box-padding: 2.2em 2.2em 2.3em;
-$box-shadow-color: rgba(201, 213, 225, 0.2);
 
 .pricing-container {
     width: 85%;
     max-width: 400px;
     background-color: #fff;
-    box-shadow: 10px 10px 25px $box-shadow-color;
+    box-shadow: 10px 10px 25px rgba(201, 213, 225, 1);
     border-radius: 10px;
     overflow: hidden;
     color: #fff;
@@ -101,7 +101,7 @@ $box-shadow-color: rgba(201, 213, 225, 0.2);
     .signup-button {
         background-color: $bright-yellow;
         border: 1px solid $grayish-blue;
-        box-shadow: 10px 10px 25px $box-shadow-color;
+        box-shadow: 10px 10px 25px darken($cyan, 10%);
         width: 100%;
         border-radius: 7px;
         color: #fff;
@@ -116,7 +116,7 @@ $box-shadow-color: rgba(201, 213, 225, 0.2);
 .pricing-container .why-us {
     grid-area: w;
     padding: $box-padding;
-    background-color: lighten($cyan, 5%);
+    background-color: $why-us-green;
 
     ul {
         list-style: none;
